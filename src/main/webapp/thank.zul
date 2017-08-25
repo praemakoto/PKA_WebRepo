@@ -1,0 +1,13 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window width="800px"  title="THANK YOU" border="normal" closable="true"  >
+<space />
+<hbox align="center" pack="center"   >
+		<space />
+		<label value="Booking Number :"  />
+		<textbox />
+		<space />
+</hbox>
+<space />
+</window>
+</zk>

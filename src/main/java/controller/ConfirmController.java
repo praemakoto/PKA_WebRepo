@@ -1,0 +1,72 @@
+package controller;
+
+import javafx.scene.control.ComboBox;
+
+import model.UserInfo;
+
+import org.zkoss.zhtml.A;
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Execution;
+import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.EventListener;
+import org.zkoss.zk.ui.event.Events;
+import org.zkoss.zul.Button;
+import org.zkoss.zul.Combobox;
+import org.zkoss.zul.Comboitem;
+import org.zkoss.zul.Textbox;
+
+import com.sun.javafx.collections.MappingChange.Map;
+
+public class ConfirmController extends BaseController {
+
+
+	private Textbox tbName,tbLName,tbEmail,tbTel,tbID;
+	private Button bConfirm,bCancel; 
+	private Combobox c = new Combobox();
+	
+	
+	
+	@Override
+	protected void initBefore(Component comp) throws Exception {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	protected void initAfter(Component comp) throws Exception {
+		// TODO Auto-generated method stub
+		initEvent();
+//		java.util.Map<String,Object> arg =   (java.util.Map<String, Object>) Executions.getCurrent().getArg();
+//		arg.put(key, value);
+//		
+//		Executions.getCurrent().createComponents("/comfirm.zul", arg);
+	}
+	
+	
+	public void initEvent(){
+		bConfirm.addEventListener(Events.ON_CLICK, new EventListener<Event>() {
+
+			@Override
+			public void onEvent(Event event) throws Exception {
+				UserInfo info = new UserInfo();
+				info.setName(tbName.getValue());
+				info.setId(Integer.parseInt(tbID.getValue()));
+				info.setEmails(tbEmail.getValue());
+				info.setTel(tbTel.getValue());
+			}
+		
+		});
+		
+		bCancel.addEventListener(Events.ON_CLICK, new EventListener<Event>() {
+
+			@Override
+			public void onEvent(Event event) throws Exception {
+				Executions.getCurrent().sendRedirect("/flight_from.zul");
+				
+			}
+		
+		});
+		
+	}
+
+}

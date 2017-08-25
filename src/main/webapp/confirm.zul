@@ -1,0 +1,52 @@
+<?page title="Confirm Information" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window width="800px"  title="Confirm Information" border="normal"  apply="controller.ConfirmController" >
+<vbox align="center" pack="center" > 
+	<panel hflex="1"  collapsible="true" >
+	<panelchildren  >
+		<grid hflex="1">
+			<columns>
+				<column hflex="1" align="left" />
+				<column hflex="4" align="left"   />
+			</columns>
+			<rows >
+				<row >
+					<label   value="ID: " />
+					<textbox id="tbID" hflex="1" />
+				</row>
+				<row >
+					<label   value="Name: " />
+					<textbox id="tbName" hflex="1" />
+				</row>
+				<row  >
+					<label   value="Last Name :" />
+					<textbox id="tbLName" hflex="1"  />
+				</row>
+				<row  >
+					<label   value="Email :" />
+					<textbox id="tbEmail" hflex="1"  />
+				</row>
+				<row   >
+					<label   value="Tel :" />
+					<textbox id="tbTel" hflex="1"  />
+				</row>
+			</rows>
+		</grid>
+		<vbox hflex="1" align="center" >
+			<label value="Payment" />
+			<combobox>
+				<comboitem label="Credit"  />
+			</combobox>
+			<hbox>
+				<button id="bConfirm" label="Confirm" />
+				<button id="bCancel" label="Cancel" />
+			</hbox>
+		</vbox>
+		
+	</panelchildren>
+</panel>
+</vbox>
+
+
+</window>
+</zk>
