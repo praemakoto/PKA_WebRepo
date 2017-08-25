@@ -10,16 +10,25 @@
 		</columns>
 		<rows>
 			<row>
-				<label value="AAAAAA" />
-				<textbox id="aa" value="555555" constraint="no empty" />
+				<label value="Source" />
+				<combobox id="source" autodrop="true" constraint="no empty">
+                        <comboitem label="Donmaung" value="DMK" />
+                        <comboitem label="Chaingmai" value="CMK" />
+                       <comboitem label="Khonkeng" value="KON" />
+                </combobox>
+			</row>
+			<row>
+				<label value="Destination" />
+			    <combobox id="destination" autodrop="true" constraint="no empty">
+                         <comboitem label="Donmaung" value="DMK" />
+                        <comboitem label="Chaingmai" value="CMK" />
+                       <comboitem label="Khonkeng" value="KON" />
+                </combobox>
 			</row>
 		</rows>
 	</grid>
-	<button id="bb"  label="OK" />
+	<button id="search"  label="OK" />
 </panelchildren>
-
 </panel>
-
-
 </window>
 </zk>
