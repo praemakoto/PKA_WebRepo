@@ -27,7 +27,7 @@
 			</row>
 			<row>
 				<label value="Date" />
-			    <datebox constraint="no past,no empty"/>
+			    <datebox constraint="no past,no empty" id="date"/>
 			</row>	
 		</rows>
 	</grid>
