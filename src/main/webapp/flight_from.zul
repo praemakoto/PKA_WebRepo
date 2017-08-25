@@ -1,0 +1,25 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window width="100%" title="new page title" border="normal" apply="controller.GetFlightController" > 
+<panel title="Select Flight" >
+<panelchildren>
+	<grid>
+		<columns>
+			<column>
+			</column>
+		</columns>
+		<rows>
+			<row>
+				<label value="AAAAAA" />
+				<textbox id="aa" value="555555" constraint="no empty" />
+			</row>
+		</rows>
+	</grid>
+	<button id="bb"  label="OK" />
+</panelchildren>
+
+</panel>
+
+
+</window>
+</zk>
