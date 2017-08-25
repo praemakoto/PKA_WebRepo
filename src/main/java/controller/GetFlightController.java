@@ -9,8 +9,9 @@ import org.zkoss.zul.Textbox;
 
 public class GetFlightController extends BaseController {
 
-	private Button bb;
-	private Textbox aa;
+	private Button submit;
+	private Textbox source;
+	private Textbox destination;
 	
 	@Override
 	protected void initBefore(Component comp) throws Exception {
@@ -25,12 +26,12 @@ public class GetFlightController extends BaseController {
 	}
 
 	public void initEvent() {
-		bb.addEventListener(Events.ON_CLICK, new EventListener<Event>() {
+		submit.addEventListener(Events.ON_CLICK, new EventListener<Event>() {
 
 			@Override
 			public void onEvent(Event event) throws Exception {
 				// TODO Auto-generated method stub
-				aa.setValue("99999999999999999");
+				source.setValue("Someting");
 			}
 		});
 	}

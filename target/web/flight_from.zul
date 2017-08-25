@@ -2,7 +2,6 @@
 <zk>
 <window width="100%" title="new page title" border="normal" apply="controller.GetFlightController" > 
 <panel title="Select Flight" >
-<panelchildren>
 	<grid>
 		<columns>
 			<column>
@@ -10,16 +9,18 @@
 		</columns>
 		<rows>
 			<row>
-				<label value="AAAAAA" />
-				<textbox id="aa" value="555555" />
+				<label value="Source" />
+				<textbox id="source" value="Waiting" constraint="no empty" />
+			</row>
+		</rows>
+		<rows>
+			<row>
+				<label value="Destination" />
+				<textbox id="destination" value="Waiting" constraint="no empty" />
 			</row>
 		</rows>
 	</grid>
-	<button id="bb"  label="OK" />
-</panelchildren>
-
+	<button id="submit"  label="Search" />
 </panel>
-
-
 </window>
 </zk>
