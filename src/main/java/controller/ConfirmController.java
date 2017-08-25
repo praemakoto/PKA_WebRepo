@@ -1,22 +1,15 @@
 package controller;
 
-import javafx.scene.control.ComboBox;
-
 import model.UserInfo;
 
-import org.zkoss.zhtml.A;
 import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.Execution;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.Button;
 import org.zkoss.zul.Combobox;
-import org.zkoss.zul.Comboitem;
 import org.zkoss.zul.Textbox;
-
-import com.sun.javafx.collections.MappingChange.Map;
 
 public class ConfirmController extends BaseController {
 
@@ -53,6 +46,7 @@ public class ConfirmController extends BaseController {
 				info.setId(Integer.parseInt(tbID.getValue()));
 				info.setEmails(tbEmail.getValue());
 				info.setTel(tbTel.getValue());
+//				Executions.getCurrent().createComponents("/thank.zul", null);
 			}
 		
 		});
