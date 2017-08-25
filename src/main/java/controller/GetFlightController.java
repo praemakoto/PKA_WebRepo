@@ -35,7 +35,7 @@ public class GetFlightController extends BaseController {
 			@Override
 			public void onEvent(Event event) throws Exception {
 				// TODO Auto-generated method stub
-				source.setValue("someting");
+				
 			}
 		});
 	}

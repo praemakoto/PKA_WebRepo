@@ -1,4 +1,4 @@
-<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?page title="Booking System" contentType="text/html;charset=UTF-8"?>
 <zk>
 <window width="100%" title="new page title" border="normal" apply="controller.GetFlightController" > 
 <panel title="Select Flight" >
@@ -12,19 +12,23 @@
 			<row>
 				<label value="Source" />
 				<combobox id="source" autodrop="true" constraint="no empty">
-                        <comboitem label="Donmaung" value="DMK" />
-                        <comboitem label="Chaingmai" value="CMK" />
-                       <comboitem label="Khonkeng" value="KON" />
+                    <comboitem label="Donmaung" value="DMK" />
+                    <comboitem label="Chaingmai" value="CMK" />
+                	<comboitem label="Khonkeng" value="KON" />
                 </combobox>
 			</row>
 			<row>
 				<label value="Destination" />
 			    <combobox id="destination" autodrop="true" constraint="no empty">
-                         <comboitem label="Donmaung" value="DMK" />
-                        <comboitem label="Chaingmai" value="CMK" />
-                       <comboitem label="Khonkeng" value="KON" />
+                    <comboitem label="Donmaung" value="DMK" />
+                    <comboitem label="Chaingmai" value="CMK" />
+                	<comboitem label="Khonkeng" value="KON" />
                 </combobox>
 			</row>
+			<row>
+				<label value="Date" />
+			    <datebox constraint="no past,no empty"/>
+			</row>	
 		</rows>
 	</grid>
 	<button id="search"  label="OK" />
